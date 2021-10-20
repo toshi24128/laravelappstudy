@@ -4,16 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HelloController extends Controller
+class SingleActionTestController extends Controller
 {
-    //
-
-    public function index($id='noname',$pass='unknown'){
+    //シングルアクションコントローラーのテスト
+    public function __invoke() {
         return <<<EOF
         
         <html>
             <head>
-                <title>Hello/Index</title>
+                <title>SingleAction</title>
                 <style>
                     body {font-size:16pt; color:#999}
                     h1 {font-size:100px; text-align:right; color:#eee; margin:-40px 0px -50px 0px;}
@@ -21,9 +20,7 @@ class HelloController extends Controller
             </head>
             <body>
                 <h1>Index</h1>
-                <p>これは、Helloコントローラーのindexアクションです。</p>
-                <li>ID:{$id}</li>
-                <li>PASS:{$pass}</li>
+                <p>これは、SingleActionコントローラーのアクションです。</p>
             </body>
         </html>
         EOF;
