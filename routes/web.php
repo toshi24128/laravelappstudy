@@ -31,4 +31,4 @@ Route::get('hello/{msg?}', function ($msg='no message.') {
 Route::get('singleActionTest', 'App\Http\Controllers\SingleActionTestController');
 Route::get('requestAndResponse', 'App\Http\Controllers\RequestAndResponseController@index');
 
-Route::get('hello/{id?}','App\Http\Controllers\HelloController@index');
+Route::get('hello','App\Http\Controllers\HelloController@index');
